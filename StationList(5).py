@@ -45,5 +45,5 @@ with open(os.getcwd() + "/data/isd-history.txt", 'r') as his:
         count += 1
     new_file_content = np.array(new_file_content)
     df = pd.DataFrame(new_file_content)
-    with open(os.getcwd() + '/data/indian_stations.csv', 'w', newline = '') as w:
+    with open(os.getcwd() + '/data/csv/indian_stations.csv', 'w', newline = '') as w:
         df.to_csv(w, index = None, header = ['STN---', 'Name'])
