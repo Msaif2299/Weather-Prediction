@@ -43,7 +43,6 @@ while looping_year<=end_year:
 		print(f"Error downloading year: {looping_year}")
 		print(str(e).split(None, 1)[0])
 	looping_year += 1
-	break
 print("All files downloaded")
 print("Closing connection")
 ftp.close()
