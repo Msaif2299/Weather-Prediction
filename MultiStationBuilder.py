@@ -67,7 +67,7 @@ if __name__ == '__main__':
         filename = os.fsdecode(file)
         if filename.endswith(".csv") and filename not in ['indian_stations.csv', 'max_val_dump(do not delete).csv', 'cols_dump(do not delete).csv', 'selection_list.csv']:
             print("On ---> {}".format(filename), end = ' ')
-            train = pd.read_csv(base_dir + filename)
+            train = pd.read_csv(base_dir + 'csv/' + filename)
             train.drop(columns=['STN---', 'WBAN'], inplace=True)
             train.index = train['YEARMODA']
             train['Dates'] = pd.to_datetime(train['YEARMODA'].astype(str), format='%Y%m%d')
