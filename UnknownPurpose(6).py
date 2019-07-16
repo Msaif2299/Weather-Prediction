@@ -7,10 +7,10 @@ for file in os.listdir(base_dir + 'data/csv/'):
     filename = os.fsdecode(file)
     if filename.endswith(".csv") and filename not in ["indian_stations.csv", "max_val_dump(do not delete).csv", "cols_dump(do not delete).csv", "selection_list.csv"]:
         df = pd.DataFrame()
-        with open(base_dir + filename) as csv:
+        with open(base_dir + 'data/csv/' + filename) as csv:
             df = pd.read_csv(csv, index_col=None)
         if len(df) < 4000:
-            os.remove(base_dir + filename)
+            os.remove(base_dir + 'data/csv/' + filename)
             print(f"{filename} removed")
 station_info = pd.DataFrame()
 station_info = pd.read_csv(base_dir + "data/csv/indian_stations.csv", index_col=None)
