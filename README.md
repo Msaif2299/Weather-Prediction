@@ -6,4 +6,4 @@ When the 'GenerateData.py' pauses in the middle, extract all the files to the "/
 Once done, press Enter in 'GenerateData.py' and let it finish
 Once that is done, run 'Main.py'
 
-To see the application in action , download the "sample" folder and run Main.py
+To see the application in action on sample data , download the "sample" folder and run Main.py
